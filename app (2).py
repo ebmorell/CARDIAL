@@ -12,7 +12,7 @@ import requests
 # drive.mount('/content/drive')  # Descomenta si lo estás ejecutando en Google Colab
 
 # Función para cargar el modelo desde Google Drive
-def load_model_from_drive(file_id): 1dEqzErkWy7DH5ctXLjDyaEbpgREKKMOw
+def load_model_from_drive(file_id):
     model_url = f"https://drive.google.com/uc?id={file_id}"
     model_path = "random_survival_forest_model.pkl"
     
@@ -24,9 +24,9 @@ def load_model_from_drive(file_id): 1dEqzErkWy7DH5ctXLjDyaEbpgREKKMOw
     # Cargar el modelo
     model = joblib.load(model_path)
     return model
-
-# Reemplaza "your-file-id" con el ID real del archivo de Google Drive
-file_id = 'your-file-id'  # Pega aquí el ID de tu archivo en Google Drive
+    
+# Reemplaza '1dEqzErkWy7DH5ctXLjDyaEbpgREKKMOw' con el ID real de tu archivo
+file_id = '1dEqzErkWy7DH5ctXLjDyaEbpgREKKMOw'
 rsf = load_model_from_drive(file_id)
 
 # Función de mapeo para las variables categóricas
